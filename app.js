@@ -35,14 +35,6 @@ type:Sequelize.STRING}
 app.use(cors());
 app.use(bodyParser());
 
-// app.use(function(request, response, next) {
-//   response.header('Access-Control-Allow-Origin', '*');
-//   next();
-// });
-
-
-
-
 app.get('/api/music', function (request, response) {
   var promise = Spotify.findAll();
   promise.then(function(spotifies) {
